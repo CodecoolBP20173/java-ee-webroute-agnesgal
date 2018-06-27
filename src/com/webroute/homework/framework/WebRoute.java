@@ -1,10 +1,13 @@
-package com.codecool.ownWebRouteReference.framework;
+package com.webroute.homework.framework;
 
+import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
-@Retention(RetentionPolicy.RUNTIME)
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
+
+@Retention(value=RUNTIME)
+@Target(ElementType.METHOD)
 public  @interface WebRoute {
-    // The default parameter
     String value();
 }
